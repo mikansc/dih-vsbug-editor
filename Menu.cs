@@ -13,7 +13,7 @@ public static class Menu
 
     switch (option)
     {
-      case 1: Editor.Start(); break;
+      case 1: Editor.Start(); Show(); break;
       case 2: break;
       case 0:
         {
@@ -23,10 +23,6 @@ public static class Menu
         }
       default: Show(); break;
     }
-
-
-
-    Console.ReadLine();
   }
 
   static void DrawCanvas()

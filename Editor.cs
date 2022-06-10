@@ -39,6 +39,26 @@ public static class Editor
     </html>
     ");
 
+    SaveFile(htmlBuilder.ToString());
+  }
+
+  public static void SaveFile(string content)
+  {
+    var directory = new DirectoryInfo("./arquivos");
+
+    if (!directory.Exists)
+      directory.Create();
+
+    Console.Clear();
+    Console.Write("Informe o nome do arquivo (sem a extensão): ");
+    var fileName = Console.ReadLine();
+
+    var file = new StreamWriter($"{directory.FullName}/{fileName}.html");
+    file.Write(content);
+    file.Close();
+
+    Console.WriteLine($"O arquivo {fileName}.html foi salvo com sucesso em {directory.FullName}");
+    Console.ReadLine();
   }
 
 }
