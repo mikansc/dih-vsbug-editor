@@ -14,7 +14,7 @@ public static class Menu
     switch (option)
     {
       case 1: Editor.Start(); Show(); break;
-      case 2: break;
+      case 2: Viewer.Start(); Show(); break;
       case 0:
         {
           Console.Clear();

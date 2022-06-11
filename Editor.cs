@@ -6,8 +6,9 @@ public static class Editor
 {
   public static void Start()
   {
-    Console.Clear();
+    System.Console.Clear();
     System.Console.WriteLine(" MODO EDIÇÃO DE CÓDIGO");
+    System.Console.WriteLine(" (pressione ESC para finalizar)");
     System.Console.WriteLine(" ====================================");
     Run();
   }
@@ -58,6 +59,9 @@ public static class Editor
     file.Close();
 
     Console.WriteLine($"O arquivo {fileName}.html foi salvo com sucesso em {directory.FullName}");
+    Console.Write("");
+    Console.Write("Pressione ENTER para retornar ao menu");
+    Console.WriteLine(" ====================");
     Console.ReadLine();
   }
 
